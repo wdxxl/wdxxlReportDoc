@@ -97,21 +97,21 @@ begin
              r_assembly_data.CARCOLORTEXT,                                                --CARCOLORTEXT
              0,
              assembly_plan_addup_daily(i_fccode,i_plcode,i_mtcode,i_crtime),              --PLAN_
-             assembly_onoffline_daily(i_plcode,'T00',i_mttext3,i_mttext4,i_crtime), --15  --ONLINE_
-             assembly_onoffline_daily(i_plcode,'F23',i_mttext3,i_mttext4,i_crtime),       --OFFLINE_
-             assembly_wip_daily(i_plcode,'T00','F23',i_mttext3,i_mttext4,i_crtime),       --WIP
+             assembly_onoffline_daily(i_plcode,'T00',i_mtcode,i_crtime), --15  			  --ONLINE_
+             assembly_onoffline_daily(i_plcode,'F23',i_mtcode,i_crtime),       			  --OFFLINE_
+             assembly_wip_daily(i_plcode,'T00','F23',i_mtcode,i_crtime),      			  --WIP
              0,
              0,
-             assembly_wip_daily(i_plcode,'F23','RK01',i_mttext3,i_mttext4,i_crtime), --20 --BALANCE
-             assembly_onoffline_yearly(i_plcode,'PBS',i_mttext3,i_mttext4,i_crtime),      --PBSINTHISYEAR
-             assembly_onoffline_yearly(i_plcode,'T00',i_mttext3,i_mttext4,i_crtime),     --ONLINETHISYEAR
-             assembly_onoffline_yearly(i_plcode,'F23',i_mttext3,i_mttext4,i_crtime),     --OFFLINETHISYEAR
+             assembly_wip_daily(i_plcode,'F23','RK01',i_mtcode,i_crtime), --20 		      --BALANCE
+             assembly_onoffline_yearly(i_plcode,'PBS',i_mtcode,i_crtime),                 --PBSINTHISYEAR
+             assembly_onoffline_yearly(i_plcode,'T00',i_mtcode,i_crtime),                 --ONLINETHISYEAR
+             assembly_onoffline_yearly(i_plcode,'F23',i_mtcode,i_crtime),                 --OFFLINETHISYEAR
              0,
              0,                                   --25
-             assembly_onoffline_monthly(i_plcode,'PBS',i_mttext3,i_mttext4,i_crtime),     --PBSINTHISMONTH
+             assembly_onoffline_monthly(i_plcode,'PBS',i_mtcode,i_crtime),                --PBSINTHISMONTH
              assembly_plan_addup_monthly(i_fccode,i_plcode,i_mtcode,i_crtime),            --PLANTHISMONTH
-             assembly_onoffline_monthly(i_plcode,'T00',i_mttext3,i_mttext4,i_crtime) ,    --ONLINETHISMONTH
-             assembly_onoffline_monthly(i_plcode,'F23',i_mttext3,i_mttext4,i_crtime) ,    --OFFLINETHISMONTH
+             assembly_onoffline_monthly(i_plcode,'T00',i_mtcode,i_crtime) ,               --ONLINETHISMONTH
+             assembly_onoffline_monthly(i_plcode,'F23',i_mtcode,i_crtime) ,               --OFFLINETHISMONTH
              0,                                   --30
              0);
    End loop;
