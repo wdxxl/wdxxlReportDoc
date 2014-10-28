@@ -1,0 +1,1718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkBook xmlVersion="20140501" releaseVersion="7.1.0">
+<TableDataMap>
+<TableData name="assembly" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="dateEdit_prodDate"/>
+<O>
+<![CDATA[2014-08-15]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[mesrpt]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select * from MESRPT.RPT_ASSEMBLYPRODUCTION 
+where productiondate = to_date('${dateEdit_prodDate}','yyyy-mm-dd')]]></Query>
+</TableData>
+</TableDataMap>
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
+<ReportPageAttr>
+<HR/>
+<FR/>
+<HC/>
+<FC/>
+</ReportPageAttr>
+<ColumnPrivilegeControl/>
+<RowPrivilegeControl/>
+<RowHeight defaultValue="723900">
+<![CDATA[1485900,723900,762000,723900,723900,723900,723900,723900,723900,1143000,723900]]></RowHeight>
+<ColumnWidth defaultValue="2743200">
+<![CDATA[0,2857500,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<CellElementList>
+<C c="0" r="0" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="0" cs="23" s="1">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=MID(dateEdit_prodDate, 1, 4) + "年" + MID(dateEdit_prodDate, 6, 2) + "月" + MID(dateEdit_prodDate, 9, 2) + "日 生产日报"]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="1" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="1" rs="3" s="2">
+<O>
+<![CDATA[车系]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="1" rs="3" s="2">
+<O>
+<![CDATA[车型]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="1" rs="3" s="2">
+<O>
+<![CDATA[颜色]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="1" cs="5" s="3">
+<O>
+<![CDATA[本年动态]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="1" cs="5" s="4">
+<O>
+<![CDATA[本月动态]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="1" rs="3" s="4">
+<O>
+<![CDATA[PBS月进车累计]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="1" cs="8" s="5">
+<O>
+<![CDATA[当日动态]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="1" rs="3" s="2">
+<O>
+<![CDATA[备注]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="2" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="2" rs="2" s="3">
+<O>
+<![CDATA[本年PBS进车累计]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="2" cs="2" s="3">
+<O>
+<![CDATA[本年累计入库]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="2" rs="2" s="3">
+<O>
+<![CDATA[本年累计上线]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="2" rs="2" s="3">
+<O>
+<![CDATA[本年累计下线]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="2" rs="2" s="4">
+<O>
+<![CDATA[本月每日计划累计]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="2" cs="2" s="4">
+<O>
+<![CDATA[本月累计入库]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="2" rs="2" s="4">
+<O>
+<![CDATA[本月累计上线]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="2" rs="2" s="4">
+<O>
+<![CDATA[本月累计下线]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="2" rs="2" s="5">
+<O>
+<![CDATA[PBS车身]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="16" r="2" rs="2" s="5">
+<O>
+<![CDATA[当日计划]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="17" r="2" rs="2" s="5">
+<O>
+<![CDATA[当日上线]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="2" rs="2" s="5">
+<O>
+<![CDATA[当日下线]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="2" rs="2" s="5">
+<O>
+<![CDATA[当日线上在制品]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="2" cs="2" s="5">
+<O>
+<![CDATA[当日实际入库]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="2" rs="2" s="5">
+<O>
+<![CDATA[成品结余]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="3" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="3" s="3">
+<O>
+<![CDATA[商品车]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="3" s="3">
+<O>
+<![CDATA[非商品车]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="3" s="4">
+<O>
+<![CDATA[商品车]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="3" s="4">
+<O>
+<![CDATA[非商品车]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="3" s="5">
+<O>
+<![CDATA[商品车]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="3" s="5">
+<O>
+<![CDATA[非商品车]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="4" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="4" cs="3" s="6">
+<O>
+<![CDATA[累计]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(E9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(F9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(G9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(H9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(I9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(J9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(K9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(L9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(M9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(N9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(O9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(P9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="16" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(Q9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="17" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(R9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(S9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(T9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(U9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(V9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(W9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="4" s="6">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(X9)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="5" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="5" cs="2" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="DOMESTICFLAG"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[国内合计条件属性]]></Name>
+<Condition class="com.fr.data.condition.ObjectCondition">
+<Compare op="0">
+<O>
+<![CDATA[0]]></O>
+</Compare>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O>
+<![CDATA[国内合计]]></O>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[国际合计条件属性]]></Name>
+<Condition class="com.fr.data.condition.ObjectCondition">
+<Compare op="1">
+<O>
+<![CDATA[0]]></O>
+</Compare>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O>
+<![CDATA[国际合计]]></O>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="3" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="CARFAMILYTEXT"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="4" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PBSINTHISYEAR"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="ONLINETHISYEAR"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="OFFLINETHISYEAR"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PLANTHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="ONLINETHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="OFFLINETHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PBSINTHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="16" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PLAN_"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="17" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="ONLINE_"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="OFFLINE_"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="WIP"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="5" s="7">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="BALANCE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="5" s="7">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="6" rs="3" s="0">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="DOMESTICFLAG"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="1" r="6" rs="2" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="CARFAMILYTEXT"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="2" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="CARTYPETEXT"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="3" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="CARCOLORTEXT"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="4" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PBSINTHISYEAR"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="5" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="ONLINETHISYEAR"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="8" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="OFFLINETHISYEAR"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="9" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PLANTHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="10" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="ONLINETHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="13" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="OFFLINETHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="14" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PBSINTHISMONTH"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="15" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="16" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="PLAN_"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="17" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="ONLINE_"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="18" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="OFFLINE_"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="19" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="WIP"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="20" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="6" s="2">
+<O t="DSColumn">
+<Attributes dsName="assembly" columnName="BALANCE"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="23" r="6" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="7" cs="2" s="8">
+<O>
+<![CDATA[小计]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(E7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(F7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(G7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(H7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(I7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(J7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(K7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(L7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(M7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(N7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(O7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(P7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="16" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(Q7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="17" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(R7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(S7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(T7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(U7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(V7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(W7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="7" s="8">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(X7)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="8" cs="3" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=A7]]></Attributes>
+</O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[国内合计条件属性]]></Name>
+<Condition class="com.fr.data.condition.ObjectCondition">
+<Compare op="0">
+<O>
+<![CDATA[0]]></O>
+</Compare>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O>
+<![CDATA[国内合计]]></O>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[国际合计条件属性]]></Name>
+<Condition class="com.fr.data.condition.ObjectCondition">
+<Compare op="1">
+<O>
+<![CDATA[0]]></O>
+</Compare>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O>
+<![CDATA[国际合计]]></O>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="4" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(E8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(F8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(G8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(H8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(I8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(J8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(K8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(L8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(M8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(N8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(O8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(P8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="16" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(Q8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="17" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(R8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(S8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(T8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(U8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(V8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(W8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="8" s="9">
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=sum(X8)]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="9" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="9" rs="4" s="2">
+<O>
+<![CDATA[生产异常状态]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="9" rs="2" s="2">
+<O>
+<![CDATA[节拍]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="9" rs="2" s="2">
+<O>
+<![CDATA[班次]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="9" rs="2" s="2">
+<O>
+<![CDATA[应用时(分)]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="9" rs="2" s="2">
+<O>
+<![CDATA[实用时(分)]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="9" rs="2" s="10">
+<O>
+<![CDATA[超时(分)]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="9" cs="4" s="2">
+<O>
+<![CDATA[超时原因分析]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="9" rs="2" s="2">
+<O>
+<![CDATA[当日计划]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="9" rs="2" s="2">
+<O>
+<![CDATA[当日应入库]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="9" rs="2" s="2">
+<O>
+<![CDATA[当日实际入库]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="9" rs="2" s="2">
+<O>
+<![CDATA[差异]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="9" cs="4" rs="2" s="2">
+<O>
+<![CDATA[差异原因分析]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="9" cs="4" rs="2" s="2">
+<O>
+<![CDATA[预防对策]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="9" rs="2" s="2">
+<O>
+<![CDATA[备注]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="10" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="10" s="2">
+<O>
+<![CDATA[物料质量]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="10" s="2">
+<O>
+<![CDATA[设备异常]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="10" s="2">
+<O>
+<![CDATA[其他]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="10" s="2">
+<O>
+<![CDATA[计划调度]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="11" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="11" s="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="11" cs="4" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="11" cs="4" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="11" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="12" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="12" s="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="12" cs="4" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="12" cs="4" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="12" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="13" cs="2" s="2">
+<O>
+<![CDATA[备注]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="13" s="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="10" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="12" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="13" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="13" cs="4" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="13" cs="4" s="2">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="23" r="13" s="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+</CellElementList>
+<ReportAttrSet>
+<ReportSettings headerHeight="0" footerHeight="0">
+<PaperSetting/>
+</ReportSettings>
+<Header reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Footer>
+</ReportAttrSet>
+<PrivilegeControl/>
+</Report>
+<ReportParameterAttr>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0"/>
+<PWTitle>
+<![CDATA[参数]]></PWTitle>
+<ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
+<Layout class="com.fr.form.ui.container.WAbsoluteLayout">
+<WidgetName name="para"/>
+<WidgetAttr>
+<PrivilegeControl/>
+</WidgetAttr>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.Label">
+<WidgetName name="label0"/>
+<WidgetAttr>
+<PrivilegeControl/>
+</WidgetAttr>
+<LabelAttr verticalcenter="true" textalign="0" autoline="true"/>
+<FRFont name="SimSun" style="0" size="72"/>
+<widgetValue>
+<O>
+<![CDATA[选择日期]]></O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="114" y="19" width="80" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.DateEditor">
+<WidgetName name="dateEdit_prodDate"/>
+<WidgetAttr>
+<PrivilegeControl/>
+</WidgetAttr>
+<DateAttr/>
+<widgetValue/>
+</InnerWidget>
+<BoundsAttr x="215" y="19" width="160" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.parameter.FormSubmitButton">
+<WidgetName name="formSubmit0"/>
+<WidgetAttr>
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[查询]]></Text>
+<Hotkeys>
+<![CDATA[enter]]></Hotkeys>
+</InnerWidget>
+<BoundsAttr x="404" y="19" width="80" height="21"/>
+</Widget>
+<LCAttr vgap="0" hgap="0"/>
+</Layout>
+<DesignAttr width="1000" height="58"/>
+</ParameterUI>
+</ReportParameterAttr>
+<StyleList>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="1" size="144"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-6697729"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-16737895"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-10040065"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-6697984"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-13312"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-26164"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-103"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-26368"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="ColorBackground" color="-26368"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+</StyleList>
+<DesignerVersion DesignerVersion="HBA"/>
+<PreviewType PreviewType="0"/>
+</WorkBook>
