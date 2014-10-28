@@ -11,7 +11,8 @@ PROCEDURE pro_rpt_assemblyproduction
      format_crtime(vc.crtime) as productiondate,
      cl.cocode as CARCOLORCODE,
      cl.cotext as CARCOLORTEXT,
-     mt.mtcode
+     mt.mtcode,
+     decode(mt.expflg,0,0,1) as EXPFLG
   from pp_vehconf vc
      inner join pp_manuorder mo on vc.monum = mo.monum and mo.plcode = 'ZZ0101'
      inner join ba_material mt on mt.mtcode = mo.mtcode
@@ -27,16 +28,27 @@ PROCEDURE pro_rpt_assemblyproduction
    i_crtime date;
 /*
  * *********************************************
- * Name: pro_rpt_assemblyproduction(i_mtcode,i_crtime)
+ * Name: pro_rpt_assemblyproduction(RunDate,OUTERRCODE,OUTERRMSG)
  * Description: build assembly production data
  * Parameter:
        RunDate
        OUTERRCODE
        OUTERRMSG
+       
+ ******************************************************************************************     
  * Verions   date  eidtor  description
- 1.0.0    2014-10-27  kexue  create this function
-
- *********************************************
+ 1.0.0    2014-10-27  kexue create this prodecure
+ 1.0.1	  2014-10-28  kexue update parameter use 'mtcode' instead of 'mttext3' and 'mttext4';
+ 1.0.2    2014-10-28  kexue add expflg 'expflg = 0 for domastic else for export'
+ ******************************************************************************************
+ *
+ * Test SQL:
+ * declare
+	aa varchar2(255);
+	bb varchar2(255);
+   begin
+  	pro_rpt_assemblyproduction(sysdate,aa,bb);
+   end;
  */
 
 begin
@@ -81,17 +93,18 @@ begin
              ONLINETHISMONTH,
              OFFLINETHISMONTH,
              COMMERCIALTHISMONTH,                --30
-             NONCOMMERCIALTHISMONTH)
+             NONCOMMERCIALTHISMONTH,
+             DOMESTICFLAG)
       VALUES(
              r_assembly_data.sitecode,                                                    --SITECODE
              r_assembly_data.productiondate,                                              --PRODUCTIONDATE
-             'T'||i_mtcode,
+             r_assembly_data.CARFAMILYTEXT,							--CARFAMILYCODE   use text TODO
              r_assembly_data.CARFAMILYTEXT,                                               --CARFAMILYTEXT
              'T'||i_mtcode,                      --5
              'T'||i_mtcode,
              'T'||i_mtcode,
              'T'||i_mtcode,
-             'T'||i_mtcode,
+             r_assembly_data.CARTYPETEXT,							--CARTYPECODE use text TODO
              r_assembly_data.CARTYPETEXT,         --10                                    --CARTYPETEXT
              r_assembly_data.CARCOLORCODE,                                                --CARCOLORCODE
              r_assembly_data.CARCOLORTEXT,                                                --CARCOLORTEXT
@@ -113,7 +126,8 @@ begin
              assembly_onoffline_monthly(i_plcode,'T00',i_mtcode,i_crtime) ,               --ONLINETHISMONTH
              assembly_onoffline_monthly(i_plcode,'F23',i_mtcode,i_crtime) ,               --OFFLINETHISMONTH
              0,                                   --30
-             0);
+             0,
+             r_assembly_data.EXPFLG);
    End loop;
 
    commit;
