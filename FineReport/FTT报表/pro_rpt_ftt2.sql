@@ -17,6 +17,7 @@ PROCEDURE pro_rpt_ftt2
  1.0.1 	  2014-11-03  kexue update issueCars "sum(distinct vin)" and add offlinecars "OK offline"
  1.0.2 	  2014-11-03  kexue Change FTTvalue = (ok offline - sum(distinct vin))/ok offline 
  1.0.3    2014-11-03  kexue Change CLOSEDRATE = ftt2_repair_ok(closed / all)
+ 1.0.4    2014-11-03  kexue add more details of repaired ftt records
  ******************************************************************************************
  *
  * Test SQL:
@@ -31,16 +32,18 @@ PROCEDURE pro_rpt_ftt2
 begin
    delete from RPT_FTT2;
    INSERT INTO RPT_FTT2
-	(SITECODE, PRODUCTIONDATE, BRCHSTATNCODE, BRCHSTATNNAME, FTTVALUE, CLOSEDRATE, ISSUECARS, OFFLINECARS)
+	(SITECODE, PRODUCTIONDATE, BRCHSTATNCODE, BRCHSTATNNAME, FTTVALUE, CLOSEDRATE, ISSUECARS, OFFLINECARS, CLOSEDISSUES, TOTALISSUES)
 	select 
 		'1081',
 		to_date(productiondate,'yyyy-mm-dd hh24:mi:ss'),
 		objcode,
 		objname, 
 		decode(total_OK_in,0,'0',round((total_OK_in-total_issue)/total_OK_in, 4)) as FTTValue,
-		ftt2_repair_ok(objcode,productiondate) as CLOSEDRATE,
+		decode(ftt2_repair_all(objcode,productiondate),0,'0',round(ftt2_repair_ok(objcode,productiondate)/ftt2_repair_all(objcode,productiondate),4)) as CLOSEDRATE,
 		total_issue,
-		total_OK_in
+		total_OK_in,
+		ftt2_repair_ok(objcode,productiondate),
+		ftt2_repair_all(objcode,productiondate)
 	from (
 	 select productiondate,objcode,objname,total_OK_in,count(vin) as total_issue
 	 from (
