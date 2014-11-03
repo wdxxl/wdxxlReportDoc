@@ -523,7 +523,12 @@ order by productiondate_year asc]]></Query>
 <PrivilegeControl/>
 </WidgetAttr>
 <DateAttr/>
-<widgetValue/>
+<widgetValue>
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=TODAY()-DAY(TODAY())+1]]></Attributes>
+</O>
+</widgetValue>
 </InnerWidget>
 <BoundsAttr x="138" y="15" width="118" height="21"/>
 </Widget>
@@ -534,7 +539,12 @@ order by productiondate_year asc]]></Query>
 <PrivilegeControl/>
 </WidgetAttr>
 <DateAttr startdatefm="=$startdate"/>
-<widgetValue/>
+<widgetValue>
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=IF(DAY(TODAY())=1,TODAY(),TODAY()-1)]]></Attributes>
+</O>
+</widgetValue>
 </InnerWidget>
 <BoundsAttr x="348" y="14" width="125" height="21"/>
 </Widget>
