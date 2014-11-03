@@ -17,6 +17,7 @@
  1.0.1    2014-11-03  kexue update FTTvalue for display, formated as '0.1234' rather than '12.34'
  1.0.2 	  2014-11-03  kexue add INCLUDEFLOATPOINT (inner join ftt_qualityline table)
  1.0.3	  2014-11-03  kexue Change FTTvalue = sum(distinct vin)/ok offline 
+ 1.0.4	  2014-11-03  kexue Change FTTvalue = (ok offline - sum(distinct vin))/ok offline 
  ******************************************************************************************
  *
  * Test SQL:
@@ -35,7 +36,7 @@ begin
   select 
     '1081',
     to_date(productiondate, 'yyyy-mm-dd hh24:mi:ss') productiondate,
-    decode(b,0,'0',round(a/b,4)) as FTTValue,
+    decode(b,0,'0',round((b-a)/b,4)) as FTTValue,
     FLOATPOINTFLG
   from
   ( select productiondate,FLOATPOINTFLG,b,count(vin) as a
