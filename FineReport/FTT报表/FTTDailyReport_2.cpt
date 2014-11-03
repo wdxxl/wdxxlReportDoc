@@ -30,7 +30,9 @@
 	closedrate as 闭环率,
 	ISSUECARS,
 	OFFLINECARS,
-	TO_CHAR(sysdate,'yyyy-mm-dd') as SYSDATE_CHAR
+	TO_CHAR(sysdate,'yyyy-mm-dd') as SYSDATE_CHAR,
+	CLOSEDISSUES,
+	TOTALISSUES
 from RPT_FTT2
 where sitecode = '${sitecode}' and TO_CHAR(productiondate,'yyyy-MM-dd')  = '${searchdate}'
 order by brchstatncode asc]]></Query>
@@ -46,7 +48,7 @@ order by brchstatncode asc]]></Query>
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,2324100,1524000,1638300,1447800,1714500,1485900,723900,723900]]></RowHeight>
+<![CDATA[0,723900,723900,2324100,1524000,1638300,1447800,1714500,1485900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[0,5753100,4495800,4953000,4038600,2971800,3924300,3505200,2362200,2743200,2743200]]></ColumnWidth>
 <FloatElementList>
@@ -286,6 +288,38 @@ order by brchstatncode asc]]></Query>
 </FloatElementList>
 <CellElementList>
 <C c="0" r="0">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="0">
+<O t="DSColumn">
+<Attributes dsName="FTT2" columnName="CLOSEDISSUES"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="0">
+<O t="DSColumn">
+<Attributes dsName="FTT2" columnName="TOTALISSUES"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -567,17 +601,9 @@ order by brchstatncode asc]]></Query>
 <Expand/>
 </C>
 <C c="7" r="7" cs="2" s="10">
-<O t="DSColumn">
-<Attributes dsName="FTT2" columnName="闭环率"/>
-<Condition class="com.fr.data.condition.ListCondition"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
-<FN>
-<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
-</RG>
-<Result>
-<![CDATA[$$$*100+'%']]></Result>
-<Parameters/>
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=IF(H1==0,0,round(G1/H1,4)*100)+'%']]></Attributes>
 </O>
 <PrivilegeControl/>
 <Expand/>
