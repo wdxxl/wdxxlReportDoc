@@ -15,6 +15,8 @@ PROCEDURE pro_rpt_ftt2
  * Verions   date  eidtor  description
  1.0.0    2014-11-03  kexue create this procedure
  1.0.1 	  2014-11-03  kexue update issueCars "sum(distinct vin)" and add offlinecars "OK offline"
+ 1.0.2 	  2014-11-03  kexue Change FTTvalue = (ok offline - sum(distinct vin))/ok offline 
+ 1.0.3    2014-11-03  kexue Change CLOSEDRATE = ftt2_repair_ok(closed / all)
  ******************************************************************************************
  *
  * Test SQL:
@@ -35,8 +37,8 @@ begin
 		to_date(productiondate,'yyyy-mm-dd hh24:mi:ss'),
 		objcode,
 		objname, 
-		decode(total_OK_in,0,'0',round(total_issue/total_OK_in, 4)) as FTTValue,
-		decode(total_OK_in,0,'0',round(ftt2_repair_ok(objcode,productiondate)/total_OK_in, 4)) as CLOSEDRATE,
+		decode(total_OK_in,0,'0',round((total_OK_in-total_issue)/total_OK_in, 4)) as FTTValue,
+		ftt2_repair_ok(objcode,productiondate) as CLOSEDRATE,
 		total_issue,
 		total_OK_in
 	from (
