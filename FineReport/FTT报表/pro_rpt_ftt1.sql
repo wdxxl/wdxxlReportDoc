@@ -14,6 +14,7 @@
  ******************************************************************************************     
  * Verions   date  eidtor  description
  1.0.0    2014-11-03  kexue create this procedure
+ 1.0.1    2014-11-03  kexue update FTTvalue for display, formated as '0.1234' rather than '12.34'
  ******************************************************************************************
  *
  * Test SQL:
@@ -32,7 +33,7 @@ begin
   select 
     '1081',
     to_date(productiondate, 'yyyy-mm-dd hh24:mi:ss') productiondate,
-    decode(b,0,'0',round(a/b*100,2)) as FTTValue
+    decode(b,0,'0',round(a/b,4)) as FTTValue
   from
   (select
     to_char(crttime,'yyyy-mm-dd') productiondate,
