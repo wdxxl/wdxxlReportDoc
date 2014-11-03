@@ -14,6 +14,7 @@ PROCEDURE pro_rpt_ftt2
  ******************************************************************************************     
  * Verions   date  eidtor  description
  1.0.0    2014-11-03  kexue create this procedure
+ 1.0.1 	  2014-11-03  kexue update issueCars "sum(distinct vin)" and add offlinecars "OK offline"
  ******************************************************************************************
  *
  * Test SQL:
@@ -28,7 +29,7 @@ PROCEDURE pro_rpt_ftt2
 begin
    delete from RPT_FTT2;
    INSERT INTO RPT_FTT2
-	(SITECODE, PRODUCTIONDATE, BRCHSTATNCODE, BRCHSTATNNAME, FTTVALUE, CLOSEDRATE, CARS)
+	(SITECODE, PRODUCTIONDATE, BRCHSTATNCODE, BRCHSTATNNAME, FTTVALUE, CLOSEDRATE, ISSUECARS, OFFLINECARS)
 	select 
 		'1081',
 		to_date(productiondate,'yyyy-mm-dd hh24:mi:ss'),
@@ -36,17 +37,21 @@ begin
 		objname, 
 		decode(total_OK_in,0,'0',round(total_issue/total_OK_in, 4)) as FTTValue,
 		decode(total_OK_in,0,'0',round(ftt2_repair_ok(objcode,productiondate)/total_OK_in, 4)) as CLOSEDRATE,
+		total_issue,
 		total_OK_in
 	from (
-	select 
-		distinct 
-		to_char(fttqi.crttime,'yyyy-mm-dd') productiondate,
-	  	fttpbd.objcode,
-		fttpbd.objname,
-	    sum(fttqi.QSTNNUM) as total_issue,
-	    ftt_ok_daily(to_date(to_char(fttqi.crttime, 'yyyy-mm-dd')||' 00:00:00' , 'yyyy-mm-dd hh24:mi:ss')) as total_OK_in
-	from ftt_qualityinfo fttqi inner join ftt_prdbasedata fttpbd on fttpbd.objcode  = fttqi.brchstatncode
-		group by to_char(fttqi.crttime,'yyyy-mm-dd'),objcode,objname
+	 select productiondate,objcode,objname,total_OK_in,count(vin) as total_issue
+	 from (
+	 select 
+			distinct 
+			to_char(fttqi.crttime,'yyyy-mm-dd') productiondate,
+		  	fttpbd.objcode,
+			fttpbd.objname,
+		    fttqi.vin,
+		    ftt_ok_daily(to_date(to_char(fttqi.crttime, 'yyyy-mm-dd')||' 00:00:00' , 'yyyy-mm-dd hh24:mi:ss')) as total_OK_in
+		from ftt_qualityinfo fttqi inner join ftt_prdbasedata fttpbd on fttpbd.objcode  = fttqi.brchstatncode
+			)
+	group by productiondate,objcode,objname,total_OK_in
 	);
 
    commit;
