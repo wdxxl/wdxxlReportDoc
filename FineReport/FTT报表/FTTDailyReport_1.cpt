@@ -339,7 +339,15 @@ order by productiondate_year asc]]></Query>
 <NameJavaScript name="网络报表1">
 <JavaScript class="com.fr.js.ReportletHyperlink">
 <JavaScript class="com.fr.js.ReportletHyperlink">
-<Parameters/>
+<Parameters>
+<Parameter>
+<Attributes name="searchmonth"/>
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=$startdate]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="600" height="400"/>

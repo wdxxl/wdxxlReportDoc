@@ -75,7 +75,15 @@ where TO_CHAR(crttime,'yyyy-mm-dd') ='${searchdate}' and BRCHSTATNCODE = ${brchs
 <NameJavaScript name="网络报表1">
 <JavaScript class="com.fr.js.ReportletHyperlink">
 <JavaScript class="com.fr.js.ReportletHyperlink">
-<Parameters/>
+<Parameters>
+<Parameter>
+<Attributes name="searchmonth"/>
+<O t="Formula" class="Formula">
+<Attributes>
+<![CDATA[=$SearchDate]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="600" height="400"/>
