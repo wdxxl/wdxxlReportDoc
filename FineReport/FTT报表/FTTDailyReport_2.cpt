@@ -48,14 +48,14 @@ order by brchstatncode asc]]></Query>
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[0,723900,723900,2324100,1524000,1638300,1447800,1714500,1485900,723900,723900]]></RowHeight>
+<![CDATA[0,723900,723900,1066800,952500,952500,1143000,876300,838200,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[0,5753100,4495800,4953000,4038600,2971800,3924300,3505200,2362200,2743200,2743200]]></ColumnWidth>
+<![CDATA[0,2628900,2552700,3124200,3086100,3086100,2705100,2895600,2286000,2743200,2743200]]></ColumnWidth>
 <FloatElementList>
 <com.fr.report.cell.FloatElement>
 <FloatElementName name="Float16"/>
 <PrivilegeControl/>
-<Location leftDistance="32461200" topDistance="2438400" width="27051000" height="16916400"/>
+<Location leftDistance="22479000" topDistance="0" width="17754600" height="12458700"/>
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <Chart name="默认">
@@ -323,13 +323,17 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="3" cs="5" s="1">
+<C c="0" r="3" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="3" cs="5" s="2">
 <O>
 <![CDATA[FTT报表]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="3" cs="3" s="2">
+<C c="6" r="3" cs="3" s="3">
 <O>
 <![CDATA[查看本月问题Top排行]]></O>
 <PrivilegeControl/>
@@ -357,19 +361,23 @@ order by brchstatncode asc]]></Query>
 </NameJavaScriptGroup>
 <Expand/>
 </C>
-<C c="1" r="4" s="3">
+<C c="0" r="4" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="4" s="4">
 <O>
 <![CDATA[二级表]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="4" s="4">
+<C c="2" r="4" s="5">
 <O>
 <![CDATA[查询日期]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="4" s="5">
+<C c="3" r="4" s="6">
 <O t="Formula" class="Formula">
 <Attributes>
 <![CDATA[=$searchdate]]></Attributes>
@@ -377,13 +385,13 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="4" s="4">
+<C c="4" r="4" s="5">
 <O>
 <![CDATA[下线车辆数]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="4" s="5">
+<C c="5" r="4" s="6">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="OFFLINECARS"/>
 <Complex/>
@@ -393,13 +401,13 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="4" s="4">
+<C c="6" r="4" s="5">
 <O>
 <![CDATA[统计日期]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="4" cs="2" s="5">
+<C c="7" r="4" cs="2" s="6">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="SYSDATE_CHAR"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -412,31 +420,35 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="5" cs="2" s="6">
+<C c="0" r="5" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="5" cs="2" s="7">
 <O>
 <![CDATA[责任第三环]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="5" cs="2" s="6">
+<C c="3" r="5" cs="2" s="7">
 <O>
 <![CDATA[问题车辆数]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="5" cs="2" s="6">
+<C c="5" r="5" cs="2" s="7">
 <O>
 <![CDATA[FTT值]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="5" cs="2" s="6">
+<C c="7" r="5" cs="2" s="7">
 <O>
 <![CDATA[问题闭环率]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="6">
+<C c="0" r="6" s="1">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="BRCHSTATNCODE"/>
 <Complex/>
@@ -446,7 +458,7 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="1" r="6" cs="2" s="7">
+<C c="1" r="6" cs="2" s="8">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="BRCHSTATNNAME"/>
 <Complex/>
@@ -506,7 +518,7 @@ order by brchstatncode asc]]></Query>
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="3" r="6" cs="2" s="8">
+<C c="3" r="6" cs="2" s="9">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="ISSUECARS"/>
 <Complex/>
@@ -530,7 +542,7 @@ order by brchstatncode asc]]></Query>
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="5" r="6" cs="2" s="8">
+<C c="5" r="6" cs="2" s="9">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="FTTVALUE_PER"/>
 <Complex/>
@@ -554,7 +566,7 @@ order by brchstatncode asc]]></Query>
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="7" r="6" cs="2" s="8">
+<C c="7" r="6" cs="2" s="9">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="CLOSEDRATE_PER"/>
 <Complex/>
@@ -578,13 +590,17 @@ order by brchstatncode asc]]></Query>
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="1" r="7" cs="2" s="9">
+<C c="0" r="7" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="7" cs="2" s="10">
 <O>
 <![CDATA[总计]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="7" cs="2" s="10">
+<C c="3" r="7" cs="2" s="11">
 <O t="Formula" class="Formula">
 <Attributes>
 <![CDATA[=sum(D7)]]></Attributes>
@@ -592,7 +608,7 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="7" cs="2" s="10">
+<C c="5" r="7" cs="2" s="11">
 <O t="DSColumn">
 <Attributes dsName="FTT2" columnName="FTT值"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -608,7 +624,7 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="7" cs="2" s="10">
+<C c="7" r="7" cs="2" s="11">
 <O t="Formula" class="Formula">
 <Attributes>
 <![CDATA[=IF(H1==0,0,round(G1/H1,4)*100)+'%']]></Attributes>
@@ -616,7 +632,11 @@ order by brchstatncode asc]]></Query>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="8" cs="8" s="11">
+<C c="0" r="8" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="8" cs="8" s="12">
 <O>
 <![CDATA[Copyright (C) 2012-2015 易云科技]]></O>
 <PrivilegeControl/>
@@ -773,12 +793,17 @@ order by brchstatncode asc]]></Query>
 <Border/>
 </Style>
 <Style imageLayout="1">
-<FRFont name="SimSun" style="1" size="160" foreground="-1"/>
+<FRFont name="SimSun" style="0" size="88"/>
+<Background name="NullBackground"/>
+<Border/>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="1" size="112" foreground="-1"/>
 <Background name="ColorBackground" color="-15830324"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="1" size="104" foreground="-16776961" underline="1"/>
+<FRFont name="SimSun" style="1" size="72" foreground="-16776961" underline="1"/>
 <Background name="ColorBackground" color="-4144960"/>
 <Border>
 <Top style="1" color="-16777216"/>
@@ -788,47 +813,47 @@ order by brchstatncode asc]]></Query>
 </Border>
 </Style>
 <Style imageLayout="1">
-<FRFont name="SimSun" style="1" size="128" foreground="-1"/>
+<FRFont name="SimSun" style="1" size="72" foreground="-1"/>
 <Background name="ColorBackground" color="-15830324"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="112"/>
+<FRFont name="SimSun" style="0" size="72"/>
 <Background name="ColorBackground" color="-26368"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="112"/>
+<FRFont name="SimSun" style="0" size="72"/>
 <Background name="ColorBackground" color="-103"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="1" size="104"/>
+<FRFont name="SimSun" style="1" size="72"/>
 <Background name="ColorBackground" color="-6697729"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="104" foreground="-16776961" underline="1"/>
+<FRFont name="SimSun" style="0" size="72" foreground="-16776961" underline="1"/>
 <Background name="NullBackground"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="104"/>
+<FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="1" size="104"/>
+<FRFont name="SimSun" style="1" size="72"/>
 <Background name="ColorBackground" color="-13312"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="104"/>
+<FRFont name="SimSun" style="0" size="72"/>
 <Background name="ColorBackground" color="-13312"/>
 <Border/>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="104" foreground="-1"/>
+<FRFont name="SimSun" style="0" size="72" foreground="-1"/>
 <Background name="ColorBackground" color="-15830324"/>
 <Border/>
 </Style>
